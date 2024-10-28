@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hover Effect with CSS</title>
+    <style>
+      /* Basic styling for the special div */
+      #special-div {
+        color: black; /* Default text color */
+        font-size: 20px; /* Text size */
+        margin: 20px 0; /* Margin around the div */
+      }
+
+      /* Change color of the special div when hovering over the image */
+      #hover-image:hover + #special-div {
+        color: red; /* Change text color on hover */
+      }
+    </style>
+  </head>
+  <body>
+    <img
+      src="image.jpg"
+      alt="Hover over me"
+      id="hover-image"
+      style="width: 200px; cursor: pointer"
+    />
+    <div id="special-div">My Special Div</div>
+  </body>
+</html>

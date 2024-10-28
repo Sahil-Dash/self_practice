@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Styled Table</title>
+    <style>
+      /* Basic table styling */
+      table {
+        width: 100%; /* Full width */
+        border-collapse: collapse; /* Collapse borders */
+        margin: 20px 0; /* Margin above and below the table */
+      }
+
+      th,
+      td {
+        border: 1px solid #ccc; /* Border for table cells */
+        padding: 10px; /* Padding inside table cells */
+        text-align: left; /* Align text to the left */
+      }
+
+      /* Header styling */
+      th {
+        background-color: #f2f2f2; /* Light grey background for headers */
+      }
+
+      /* Alternating row colors */
+      tr:nth-child(1),
+      tr:nth-child(4),
+      tr:nth-child(7),
+      tr:nth-child(10),
+      tr:nth-child(3n + 1) {
+        background-color: #e6f7ff; /* Light blue background */
+      }
+
+      /* Optional: Hover effect for rows */
+      tr:hover {
+        background-color: #d9e6f2; /* Slightly darker blue on hover */
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <thead>
+        <tr>
+          <th>Header 1</th>
+          <th>Header 2</th>
+          <th>Header 3</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Row 1, Cell 1</td>
+          <td>Row 1, Cell 2</td>
+          <td>Row 1, Cell 3</td>
+        </tr>
+        <tr>
+          <td>Row 2, Cell 1</td>
+          <td>Row 2, Cell 2</td>
+          <td>Row 2, Cell 3</td>
+        </tr>
+        <tr>
+          <td>Row 3, Cell 1</td>
+          <td>Row 3, Cell 2</td>
+          <td>Row 3, Cell 3</td>
+        </tr>
+        <tr>
+          <td>Row 4, Cell 1</td>
+          <td>Row 4, Cell 2</td>
+          <td>Row 4, Cell 3</td>
+        </tr>
+        <tr>
+          <td>Row 5, Cell 1</td>
+          <td>Row 5, Cell 2</td>
+          <td>Row 5, Cell 3</td>
+        </tr>
+        <tr>
+          <td>Row 6, Cell 1</td>
+          <td>Row 6, Cell 2</td>
+          <td>Row 6, Cell 3</td>
+        </tr>
+        <tr>
+          <td>Row 7, Cell 1</td>
+          <td>Row 7, Cell 2</td>
+          <td>Row 7, Cell 3</td>
+        </tr>
+        <tr>
+          <td>Row 8, Cell 1</td>
+          <td>Row 8, Cell 2</td>
+          <td>Row 8, Cell 3</td>
+        </tr>
+        <tr>
+          <td>Row 9, Cell 1</td>
+          <td>Row 9, Cell 2</td>
+          <td>Row 9, Cell 3</td>
+        </tr>
+        <tr>
+          <td>Row 10, Cell 1</td>
+          <td>Row 10, Cell 2</td>
+          <td>Row 10, Cell 3</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

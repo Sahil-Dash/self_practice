@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fixed Vertical Menu</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif; /* Font for the page */
+      }
+
+      /* Styles for the fixed menu bar */
+      .menu {
+        position: fixed; /* Fixed position */
+        left: 0; /* Stick to the left side */
+        top: 0; /* Start from the top */
+        width: 200px; /* Width of the menu */
+        height: 100%; /* Full height */
+        background-color: #333; /* Dark background color */
+        color: white; /* Text color */
+        padding-top: 20px; /* Padding at the top */
+        box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5); /* Shadow effect */
+      }
+
+      /* Styles for the menu items */
+      .menu a {
+        display: block; /* Make links block-level elements */
+        padding: 15px; /* Padding for links */
+        color: white; /* Link text color */
+        text-decoration: none; /* Remove underline */
+        transition: background-color 0.3s; /* Smooth background transition */
+      }
+
+      .menu a:hover {
+        background-color: #575757; /* Change background on hover */
+      }
+
+      /* Main content area */
+      .content {
+        margin-left: 220px; /* Space for the fixed menu */
+        padding: 20px; /* Padding for the content */
+      }
+
+      /* Simulate longer content */
+      .spacer {
+        height: 1500px; /* Height to enable scrolling */
+        background: linear-gradient(
+          to bottom,
+          #f0f0f0,
+          #e0e0e0
+        ); /* Gradient background */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="menu">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+    </div>
+
+    <div class="content">
+      <h1>Welcome to My Website</h1>
+      <p>
+        This is some content on the page. Scroll down to see the effect of the
+        fixed menu.
+      </p>
+      <div class="spacer"></div>
+      <!-- Spacer to create scrollable content -->
+    </div>
+  </body>
+</html>

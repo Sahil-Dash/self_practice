@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Background Image Change on Hover</title>
+    <style>
+      /* Basic styling for the container */
+      .image-container {
+        width: 300px; /* Width of the container */
+        height: 200px; /* Height of the container */
+        background-image: url("image1.jpg"); /* Initial background image */
+        background-size: cover; /* Cover the entire div */
+        transition: background-image 0.3s ease; /* Smooth transition */
+      }
+
+      /* Change background image on hover */
+      .image-container:hover {
+        background-image: url("image2.jpg"); /* Background image on hover */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="image-container"></div>
+    <!-- Div with background image -->
+  </body>
+</html>
