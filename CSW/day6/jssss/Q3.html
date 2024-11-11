@@ -1,0 +1,55 @@
+<html>
+<head>
+    <title>q3</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        #animatedDiv {
+            position: absolute;
+            background-color:grey;
+            width: 80px;
+            height: 50px;
+            padding: 10px;
+            color: white;
+            text-align: center;
+            font-family:Cursive;
+            position:center;
+        }
+        #animateBtn {
+            margin: 10px;
+            padding: 8px 15px;
+            position:absolute;
+            top: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div id="animatedDiv">hello,hello</div>
+    <button id="animateBtn">touch me</button>
+    <script>
+        $(document).ready(function() {
+            $('#animateBtn').click(function() {
+                $('#animatedDiv')
+                    .animate({
+                        opacity: 0.3,
+                        height: '50px'
+                    }, 'slow')
+                   .animate({
+                        width: '300px',
+                        opacity: 0.7
+                    }, 'fast')
+                    .animate({
+                        height: '50px',
+                        opacity: 0.3
+                    }, 'fast')
+                    .animate({
+                        width: '300px',
+                        opacity: 0.7
+                    }, 'slow')
+                    .animate({
+                        fontSize: '2em'
+                     }, 'slow');
+            });
+        });
+    </script>
+</body>
+</html>

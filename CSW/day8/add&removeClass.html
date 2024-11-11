@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#b1").click(function(){
+                $("h1,h2,p").addClass("red bg size");
+
+            });
+            $("#b2").click(function(){
+                $("h1,h2,p").removeClass("red bg size");
+                $("p").removeClass("blue");
+            });
+            $("#b3").click(function(){
+                $("h1,h2,p").toggleClass("blue ");
+
+            });
+
+        });
+
+    </script>
+    <style>
+        .red{
+            color: red;
+        }
+        .size{
+            font-size: 2em;
+        }
+        .bg{
+            background-color: yellow;
+        }
+        .blue{
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <h1>this is the  first heading</h1>
+    <h2>this is the  second heading</h2>
+    <p>this is the first paragraph</p>
+    <p class="blue">this is the second paragraph</p>
+
+    <button id="b1">Addclass</button>
+    <button id="b2">RemoveClass</button>
+    <button id="b3">ToggleClass</button>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+         $(document).ready(function () {
+            $("#b1").click(function(){
+                $("span").parent().css({"color":"blue","border":"3px solid red"})
+                
+
+            });
+            $("#b2").click(function(){
+                $("span").parents().css({"color":"red","border":"3px solid pink"})
+                
+            });
+            $("#b3").click(function(){
+                $("span").parentsUntil("div").css({"color":"red","border":"3px solid orange"})
+               
+            });
+            $("#b4").click(function(){
+                $("div").children().css({"color":"violet","border":"3px solid khaki"})
+               
+            });
+            $("#b5").click(function(){
+                $("div").find("span").css({"color":"aquamarine","border":"3px solid rosybrown"})
+               
+            });
+
+         });
+                
+                
+
+    </script>
+    <style>
+        #outer *{display: block;
+                border: 3px solid grey;
+                color: green;
+                padding: 3px;
+                margin: 20px;
+        }
+
+    </style>
+</head>
+<body id="outer">body(great great grand parent)
+    <div>div(great-grand parent)
+        <ul>ul(grand parent)
+            <li>li(direct parent)
+                <span>span1</span>
+                <span>span2</span>
+            </li>
+           
+        </ul>
+    </div>
+    <button id="b1">parent</button>
+    <button id="b2">parents</button>
+    <button id="b3">parentsUntil</button>
+
+    <button id="b4">children</button>
+    <button id="b5">find</button>
+</body>
+</html>

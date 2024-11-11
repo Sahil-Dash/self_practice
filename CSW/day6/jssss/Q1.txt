@@ -1,0 +1,62 @@
+<html>
+<head>
+    <style>
+        .custom-alert {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.3);
+            z-index: 1000;
+        }
+
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.5);
+            z-index: 999;
+        }
+
+        .ok-button {
+            padding: 8px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .ok-button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <body>
+<button id="showAlertBtn">Show Alert</button> 
+        <div class="overlay" id="overlay"></div>
+        <div class="custom-alert" id="customAlert">
+            <p>This is a custom alert message!</p>
+            <button class="ok-button" id="okButton">OK</button>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script>
+            $(document).ready(function() {
+                $("#showAlertBtn").click(function() {
+                    $("#overlay, #customAlert").fadeIn();
+                });
+                $("#okButton").click(function() {
+                    $("#overlay, #customAlert").fadeOut();
+                });
+            });
+        </script>
+    </body>

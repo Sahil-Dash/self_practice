@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    
+
+       <script>
+           $("#document").ready(function(){
+                   $("#btn1").hover(function(){
+                    $("p").append("<b>new content</b>");
+                 });
+                 $("#btn2").hover(function(){
+                   $("ul").append("<b>new content</b>");
+                 });
+                 
+                 $("#btn3").hover(function(){
+                   $("p").prepend("<b>new content at first</b>");
+                 });
+                 
+                 $("#btn4").hover(function(){
+                   $("ul").prepend("<b>milk</b>");
+                 });
+                 $("#btn5").click(function(){
+                   $("p").after("<b>adding paragraph after</p>");
+                 });
+                 $("#btn6").click(function(){
+                  $("p").before("<b>adding paragraph before</p>")
+                 });
+                 $("#btn7").click(function(){
+                  $("ul").after("<li>i1</li>");
+                 });
+                 $("#btn8").click(function(){
+                  $("ul").before("<li>i2</li>")
+                 });
+                 
+       
+               });       
+       </script>
+</head>
+<body>
+    <p >Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
+    <p >Lorem ipsum dolor sit amet.</p>
+
+    <ul>
+        <li>i1</li>
+        <li>i2</li>
+        <li>i3</li>
+    </ul>
+
+    <button id="btn1">append in paragraph</button>
+    <button id="btn2">append in list</button>
+    <button id="btn3">peppend in paragraph</button>
+    <button id="btn4">peppend in list</button>
+
+    <button id="btn5">After paragraph</button>
+    <button id="btn6">Before paragraph</button>
+    <button id="btn7">After list</button>
+    <button id="btn8">Before list</button>
+</body>
+</html>

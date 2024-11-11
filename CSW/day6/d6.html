@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous">
+    </script>
+    <script>
+        $(document).ready(function(){
+            $("#btn1").click(function(){
+                alert("text:"+$("#para").text());
+            });
+            $("#btn2").click(function(){
+                alert("HTML:"+$("#para").html());
+            });
+            $("#btn3").click(function(){
+                alert("value:"+$("#sname").val());
+            });
+            $("#btn4").click(function(){
+                $("#para").text("hi user");
+
+            });
+            $("#btn5").click(function(){
+                $("#para").html("<b>hi user</b>");
+
+            });
+            $("#btn6").click(function(){
+                $("#sname").val("anuj");
+                });
+        });
+    </script>
+</head>
+<body>
+    <p id="para">this is a paragraph  <b>bold text</b></p>
+    <p> <label for="sname">Student name</label></p>
+    <input type="text " id="sname" name="sname" value="anuj"><br>
+
+    <button id="btn1">button1</button>
+    <button id="btn2">button2</button>
+    <button id="btn3">button3</button>
+    <button id="btn4">button4</button>
+    <button id="btn5">button5</button>
+    <button id="btn6">button6</button>
+</body>
+</html>

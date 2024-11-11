@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+
+    </style>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+         $("#document").ready(function(){
+             $("#btn1").click(function(){
+                  $("#d").after("<b>hiiii</b><br>");
+             });
+            $("#btn2").click(function(){
+                  $("#d").before("<b>helloo</b><br>")
+             });
+         });
+
+                 
+        
+                 
+    </script>
+</head>
+<body>
+   <div id="d"> <img src="./soa.jpg" alt="soa logo" height="200px" width="200px"></div>
+    <button id="btn1">after</button>
+    <button id="btn2">before</button>
+</body>
+</html>

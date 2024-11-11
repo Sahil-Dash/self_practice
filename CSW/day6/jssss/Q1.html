@@ -1,0 +1,55 @@
+<html>
+<head>
+  <title>Q1</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      transition: background-color 0.3s ease;
+    }
+    .color-buttons {
+      margin-bottom: 20px;
+    }
+    .color-buttons button {
+      margin-right: 10px;
+      padding: 10px 20px;
+      font-size: 16px;
+    }
+    .toggle-button {
+      padding: 10px 20px;
+      font-size: 16px;
+    }
+    .toggle-divs {
+      margin-top: 20px;
+    }
+    .toggle-divs div {
+      margin: 10px;
+      padding: 20px;
+      background-color: lightgray;
+    }
+  </style>
+</head>
+<body>
+  <div class="color-buttons">
+    <button id="red-button">Red</button>
+    <button id="blue-button">Blue</button>
+    <button id="green-button">Green</button>
+  </div>
+  <script>
+    $(document).ready(function() {
+      $('#red-button').click(function() {
+        $('body').css('background-color', 'red');
+      });
+      $('#blue-button').click(function() {
+        $('body').css('background-color', 'blue');
+      });
+      $('#green-button').click(function() {
+        $('body').css('background-color', 'green');
+      });
+      $('.toggle-button').click(function() {
+        $('div.toggle-divs').children('div').toggle();
+      });
+    });
+  </script>
+</body>
+</html>

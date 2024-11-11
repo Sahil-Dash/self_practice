@@ -1,0 +1,13 @@
+body {
+    background-color: #f0f8ff; /* Light blue background color */
+}
+
+.h5-heading {
+    color: purple; /* Color for h5 heading */
+    font-size: 20px; /* Font size for h5 heading */
+}
+
+.paragraph {
+    color: darkslategray; /* Text color for paragraphs */
+    font-size: 16px; /* Font size for paragraphs */
+}

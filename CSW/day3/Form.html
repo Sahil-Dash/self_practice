@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <style>
+        div{
+            border: 2px solid black;
+            border-radius: 5px;
+            background-color: yellow;
+            padding: 15px;
+            input [type=text],
+            input[type=password],
+            select ,textaera{
+                width: 100%;
+                padding: 10px 15px;
+                display: inline-block;
+                border: 3px solid blue;
+                border-radius: 5px;
+                box-sizing: border-box;
+                
+
+            }
+            input[type=submit]{
+                width: 100%;
+                background-color: orange;
+                color: brown;
+                padding: 10px 16px;
+                margin: 6px;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+
+            }
+            input[type=text] :hover,
+            input[type=password]:hover,
+            select:hover,
+            input[type=submit]:hover{
+                background-color: lightgreen;
+                color: red;
+            }
+            input[type=text] :focus,
+            input[type=password]:focus{
+                background-color: lightblue;
+            }
+            lable{
+                display: inline-block;
+                color: gray;
+                padding: 10px;
+
+            }
+            input[type=radio]{
+                width: 25px;
+                height: 25px;
+                margin: 10px;
+
+            }
+            input[type=radio]:focus{
+               outline: 2px solid blue;
+               outline-offset:  2px ; 
+            }
+
+
+
+
+            
+        }
+    </style>
+</head>
+<body>
+    <h2>Form in css</h2>
+    <div><form action="">
+        <label for="ename">Employee Name :</label>
+        <input type="text" name="ename" id="ename" placeholder="Enter name"><br>
+
+        <label for="pwd" >Password :</label>
+        <input type="password" name="pwd" id="pwd" placeholder="Enter password"><br>
+
+        city: <select name="city" id="city">
+            <option value="delhi">Delhi</option>
+            <option value="bbsr">Bhubaneswar</option>
+            option
+        </select><br>
+        <label for="commt">comments</label>
+        <textarea name="commt" id="commt" cols="10" rows="4"></textarea><br>
+
+
+
+        <input type="radio" id="male" name="b">
+        <label for="male">male</label>
+        <input type="radio" id="female" name="b">
+        <label for="female">female</label>
+        
+
+        
+    </form></div>
+</body>
+</html>

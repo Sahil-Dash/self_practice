@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 
+     <title>jQuery Animation Example</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        #div1 {
+            width: 200px;
+            height: 200px;
+            background-color: aqua;
+            
+            line-height: 200px; 
+            font-size: 1em;
+            transition: all 0.5s; 
+            justify-content: center;
+            align-items: center;
+            display: flex;
+        }
+    </style>
+	<script>
+$(document).ready(function() {
+    $('#animateButton').click(function() {
+        $('#div1')
+            .animate({ opacity: 0.3, height: '100px' }, "slow") 
+            .animate({ width: '300px', opacity: 0.7 }, "fast")
+            .animate({ height: '70px', opacity: 0.3 }, 3000) 
+            .animate({ width: '300px', opacity: 0.7 }, 2000) 
+            .animate({ fontSize: '2em' }, 1000); 
+    });
+    $("#btn2").click(function(){
+                $("#div1").stop(true,true);
+
+            });
+});
+</script>
+ 
+ 
+</head>
+<body>
+<button id="animateButton">Animate</button>
+<button id="btn2">Stop</button>
+<div id="div1">Animate Me!</div>
+
+ 
+</body>
+</html>
+ 
+

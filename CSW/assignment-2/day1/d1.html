@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        a.link{color: red;}
+        a.visited{color: blue;}
+        a.hover{ color: green; }
+        a.active{color: bisque;}
+
+        .key:link,.key:visited{
+            background-color: aqua;
+            color: pink;
+            padding: 10px 20px;
+        }
+        .key:hover,.key:active{
+            background-color: aqua;
+            color: yellow;
+            padding: 10px 20px;
+        }
+
+        .b1{list-style-type: circle;}
+        .b2{list-style-type: square;}
+        .b3{list-style-type: lower-roman;}
+        .b4{list-style-type: lower-alpha;}
+        .b5{list-style-type: decimal-leading-zero;}
+        
+        li.list{
+            list-style: none;
+            padding: 10px 30px ;
+            background-image: url(./soaLogo.jpg);
+            background-repeat: no-repeat;
+            background-position: left center;
+            background-size: 15px;
+        }
+
+
+        table{
+            width: 70%;
+            border-collapse: collapse;
+
+        }
+        table,th,td{
+            border: 3px solid green;
+            padding: 8px;
+        }
+        th{
+            height: 70px;
+            text-align: left;
+        }
+        tr:nth-child(odd){
+            background-color: aquamarine;
+        }
+        tr:nth-child(even){
+            background-color: bisque;
+        }
+
+        li:nth-child(3n+1){
+            background-color: red;
+        }
+
+
+
+        .demo{
+            display: block;
+
+        }
+        #s1{background-color: green;}
+        #s2{background-color: pink;}
+        #d1{background-color: red;}
+        #d2{background-color: yellow;}
+        
+   
+</style>
+</head>
+<body>
+   <p><b> <a  class="key" href="https://chatgpt.com">chatgpt</a> </b></p>
+
+
+<h1>unorder list</h1>
+<ul class="b1">
+    <li>l1</li>
+    <li>l2</li>
+    <li>l3</li>
+</ul>
+<ul class="b2">
+    <li>l1</li>
+    <li>l2</li>
+    <li>l3</li>
+</ul>
+<ol class="b3">
+    <li>l1</li>
+    <li>l2</li>
+    <li>l3</li>
+</ol>
+<ol class="b4">
+    <li>l1</li>
+    <li>l2</li>
+    <li>l3</li>
+</ol>
+<ol class="b5" start="5">
+    <li>l1</li>
+    <li>l2</li>
+    <li>l3</li>
+</ol>
+</ul>
+<ul class="b6">
+    <li class="list">l1</li>
+    <li class="list">l2</li>
+    <li class="list">l3</li>
+    <li class="list">l4</li>
+    <li class="list">l5</li>
+    <li class="list">l6</li>
+</ul>
+
+
+<h1>table</h1>
+<table >
+    <thead>
+        <th>regd no</th>
+        <th>name</th>
+        <th>mark</th>
+
+    </head>
+    <tr>
+        <td>1</td>
+        <td>rohit</td>
+        <td>500</td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>sahil</td>
+        <td>550</td>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>ashish</td>
+        <td>560</td>
+    </tr>
+</table>
+
+
+
+<h1>css display</h1>
+<a class="demo" href="https://www.google.com">google page</a>
+<a class="demo" href="https://www.amazon.com">amazon</a>
+<a class="demo" href="https://www.flipkart.com">Flipkart</a>
+<a class="demo" href="https://www.soa.ac.in">soa</a>
+
+
+
+
+<span id="s1">this is a span</span>
+<span id="s2">this is a span</span>
+<div id="d1">this is a span</div>
+<div id="d2">this is a span</div>
+
+</body>
+</html>

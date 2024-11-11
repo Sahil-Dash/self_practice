@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function(){
+            $("#btn1").click(function(){
+                $(".key").hide(3000);
+            });
+            $("#btn2").click(function(){
+                $(".key").show(3000,function(){
+                alert("this paragraph  is shown");
+            });
+            });
+
+            $("#btn3").click(function(){
+                $(".key").toggle(2000);
+            });
+
+
+        })
+    </script>
+</head>
+<body>
+    <h2 class="key">jquery hid and show effects </h2>
+    <p  class="key" >Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, eveniet!</p>
+    <p  class="key" >Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, eveniet!</p>
+    <p  class="key" >Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, eveniet!</p>
+    <p  class="key" >Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, eveniet!</p>
+
+    <button id="btn1">hide</button>
+    <button id="btn2">show</button>
+    <button id="btn3">toggle</button>
+
+</body>
+</html>

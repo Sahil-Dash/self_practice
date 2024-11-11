@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <style>
+        #p1 { background-color: blue; }
+        #p2 { background-color: yellow; }
+        #p3 { background-color: red; }
+    </style>
+    <script>
+        $(document).ready(function(){
+           
+            $("#b1").click(function(){
+               alert("Background color of p1: " + $("#p1").css("background-color"));
+               alert("Background color of p2: " + $("#p2").css("background-color"));
+               alert("Background color of p3: " + $("#p3").css("background-color"));
+            });
+
+            
+            $("#b2").click(function(){
+               
+               $("#p1").css("background-color", "red");
+               $("#p2").css("background-color", "green");
+               $("#p3").css("background-color", "blue");
+
+               
+               alert("Background colors have been updated!");
+            });
+        });    
+    </script>
+    
+</head>
+<body>
+    <p id="p1">This is the first paragraph</p>
+    <p id="p2">This is the second paragraph</p>
+    <p id="p3">This is the third paragraph</p>
+
+    <button id="b1">Get the property</button>
+    <button id="b2">Set the property</button>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function(){
+            $("#btnl").click(function(){
+                $("*").hide();
+            });
+            $("h1,h2,h3").dblclick(function(){
+                $("this").hide();
+                });
+        });
+
+    </script>
+
+</head>
+<body>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, iure!</p>
+    <p class="par">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus, deleniti </p>
+    <button id="btnl">button1</button>
+    <h1 class="this">hiiii</h1>
+    <h2 class="this">hello</h2>
+    <h3 class="this">welcome</h3>
+</body>
+</html>

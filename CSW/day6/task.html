@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <style>
+
+    </style>
+    <script>
+        $("#document").ready(function(){
+            $("#btn1").hover(function(){
+             alert($("#link").attr("href"));
+          });
+          $("#btn2").click(function(){
+            $("#link").attr("href","https://www.soa.ac.in");
+          });
+          $("#btn3").click(function(){
+             alert($("#image").attr("src"));
+          });
+          $("#btn4").click(function(){
+             ($("#image").attr("src","soa.jpg"));
+          });
+          $("#btn5").click(function(){
+             let h=$('#image').attr('height',"200px");
+             let w=$('#image').attr('width',"200px");
+            
+          });
+          $("#btn6").click(function(){
+             let h=$('#image').attr('height');
+             let w=$('#image').attr('width');
+             alert(`height:${h},width:${w}`);
+          });
+        });
+    </script>
+</head>
+<body><center>
+    <p><a href="https://www.google.com" id="link">Google </a></p>
+    <p><img src="s.jpg"height="100px" width="100px" id="image"></p>
+    <button id="btn1">show href value</button>
+    <button id="btn2">change href value</button>
+    <button id="btn3">show image value</button>
+    <button id="btn4">change href value</button>
+    <button id="btn5">change image height and width</button>
+    <button id="btn6">show image height and width</button>
+
+
+</center>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .div1{
+            position: relative;
+
+        }
+        .div2{
+            position: absolute;
+            background-color: orange;
+            width: 60ox;
+            height: 60px;
+            padding: 12px 16px;
+            margin: 10px;
+            box-shadow:15px 15px 5px 5px ;
+            display: none;
+        }
+        .div1:hover .div2{
+            display: block;
+
+        }
+
+    </style>
+</head>
+<body>
+    <h2>basic dropdown</h2>
+    <div class="div1">
+        if cursor moves here,
+        it creates a dropdown here.
+        <div class="div2">
+            <p>hii!!!</p>
+        </div>
+    </div>
+</body>
+</html>

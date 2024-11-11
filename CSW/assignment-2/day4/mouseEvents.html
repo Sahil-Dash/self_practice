@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function(){
+            $(".key").mouseenter(function(){
+                $(".key").css("background-color", "red").css("color","yellow");
+            });
+            $(".key").mouseleave(function(){
+                $(".key").css("background-color", "green").css("color","pink");
+            });
+        });
+    </script>
+</head>
+<body>
+    <h2 class="key">Mouse Events </h2>
+    <p  class="key" >Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, eveniet!</p>
+    <p  class="key" >Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, eveniet!</p>
+    <p  class="key" >Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, eveniet!</p>
+    <p  class="key" >Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, eveniet!</p>
+</body>
+</html>

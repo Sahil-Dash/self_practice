@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Remove Element by ID</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $('#add').click(function () {
+          $('#1').addClass(' intro note');
+          $('#p3').addClass(' intro note');
+        });
+        $('#remove').click(function () {
+          $('#1').removeClass(' intro note');
+        });
+        $('#set').click(function () {
+          $('#2').css('background-color', 'yellow');
+          $('#2').css('color', 'green');
+          $('#p3').css('background-color', 'yellow');
+          
+        });
+      });
+    </script>
+
+    <style>
+      .intro {
+        font-size: 20px;
+        color: cyan;
+      }
+      .note {
+        background-color: pink;
+      }
+    </style>
+  </head>
+  <body>
+    
+
+    <div id="content">
+      <p id="1">This is first paragraph.</p>
+      <p id="2">This is second paragraph.</p>
+      <p id="p3">This is second paragraph.</p>
+    </div>
+    <button id="add">Add Class</button>
+    <button id="remove">Remove Class</button>
+    <button id="set">Set Css</button>
+  </body>
+</html>

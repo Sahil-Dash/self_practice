@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <style>
+       #d{
+            height: 200px;
+            width: 200px;
+            background-color: yellow;
+        }
+      
+
+    </style>
+    <script>
+        $(document).ready(function(){
+            $("#b1").click(function(){
+                $("#d").remove();
+             });
+            $("#b2").click(function(){
+                $("#d").empty();
+
+            });
+            $("#b3").click(function(){
+                $("p").remove(".para");
+
+            });
+            $("b1").click(function(){
+
+            });
+
+        });
+    </script>
+</head>
+<body>
+    <div id="d">
+        we arre using div element
+            <p class="para">1st paragraph</p>
+            <p class="para">2nd paragraph</p>
+            <p>paragraph without calss</p>
+
+        
+
+    </div><br>
+
+    <button id="b1">Remove</button>
+    <button id="b2">empty</button>
+    <button id="b3">remove with filter</button>
+</body>
+</html>

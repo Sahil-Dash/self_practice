@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+   <script>
+     $(document).ready(function(){
+       
+        $("#b1").click(function(){
+            $('#' +$('#elementId').val()).remove();
+        });
+
+        
+    });
+   </script>
+<body>
+    <div id="content">
+    <h2>Remove by ID name</h2>
+    <p id="1">paragraph 1</p>
+    <p id="2">paragraph 2</p>
+    <p id="3">paragraph 3</p>
+    <p id="4">paragraph 4</p>
+</div>
+<input type="text" id="elementId" placeholder="Enter id to remove">
+<button id="b1">remove element</button>
+
+</body>
+</html>
