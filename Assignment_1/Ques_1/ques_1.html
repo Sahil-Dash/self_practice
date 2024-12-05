@@ -48,3 +48,55 @@
 </html>
 
 
+
+const { Client, CheckoutAPI } = require('@adyen/api-library');
+const AdyenHelper = require('./index'); // Adjust the path as necessary
+
+jest.mock('@adyen/api-library', () => {
+    return {
+        Client: jest.fn(),
+        CheckoutAPI: jest.fn(() => ({
+            RecurringApi: {
+                getTokensForStoredPaymentDetails: jest.fn().mockResolvedValue({
+                    token: 'mocked-token',
+                    expiryDate: '12/25',
+                }),
+            },
+        })),
+    };
+});
+
+describe("AdyenHelper", () => {
+    let adyenHelper;
+
+    beforeEach(() => {
+        adyenHelper = new AdyenHelper();
+    });
+
+    describe("getCardToken", () => {
+        it("should call getTokensForStoredPaymentDetails and return response", async () => {
+            const shopperId = 'shopper-123';
+            const response = await adyenHelper.getCardToken();
+
+            // Verify that the API method was called with correct parameters
+            expect(adyenHelper.checkoutApi.RecurringApi.getTokensForStoredPaymentDetails).toHaveBeenCalled()
+
+            // Verify that the response is as expected
+            expect(response).toEqual({
+                token: 'mocked-token',
+                expiryDate: '12/25',
+            });
+        });
+
+        it("should throw an error when getTokensForStoredPaymentDetails fails", async () => {
+            const shopperId = 'shopper-123';
+            const errorMessage = "API error";
+            
+            // Mocking the error scenario
+            adyenHelper.checkoutApi.RecurringApi.getTokensForStoredPaymentDetails.mockRejectedValue(new Error(errorMessage));
+
+            await expect(adyenHelper.getCardToken(shopperId)).rejects.toThrow(errorMessage);
+        });
+    });
+});
+
